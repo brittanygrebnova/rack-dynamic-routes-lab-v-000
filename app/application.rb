@@ -9,7 +9,7 @@ class Application
     req = Rack::Request.new(env)
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      binding.pry
+      #binding.pry
       if @@items.select{|i| i.name = item_name}
           @@items.each do |i|
             resp.write "#{i.price}" 
