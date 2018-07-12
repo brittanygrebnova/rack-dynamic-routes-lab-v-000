@@ -12,7 +12,7 @@ class Application
                 binding.pry
       if @@items.include?(item_name)
           @@items.each do |i|
-            resp.write "#{item_name.price}" 
+            resp.write "#{i.price}" 
           end
       else
         resp.write "Item not found"
