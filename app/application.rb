@@ -9,7 +9,6 @@ class Application
     req = Rack::Request.new(env)
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-                binding.pry
       if @@items.include?(item_name)
           @@items.each do |i|
             resp.write "#{i.price}" 
